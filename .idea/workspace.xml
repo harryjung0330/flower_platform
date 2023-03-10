@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/FlowerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/FlowerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenVerifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/dto/VerifyTokenResultDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtCreationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtMalformedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomAuthorizedClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomAuthorizedClientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomStatelessAuthorizationRequestRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomStatelessAuthorizationRequestRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/SuccessAndFailureHandlers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/FlowerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/FlowerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/ObjectMapperConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/ObjectMapperConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MoFrrRdOLMMpinfqoLAOnYyyZy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jeongsang-won/Documents/flower-startup/development/spring&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="FlowerPlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="jasypt.encryptor.password" value="asssvdabamkklkslkdmfsllaannkjnujasdf" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.example.flowerplatform.FlowerPlatformApplication" />
+      <module name="flower-platform.main" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.flowerplatform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
+      <envs>
+        <env name="jasypt.encryptor.password" value="asssvdabamkklkslkdmfsllaannkjnujasdf" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.FlowerPlatformApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="" />
+      <created>1678426229585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678426229585</updated>
+    </task>
+    <servers />
+  </component>
+</project>
