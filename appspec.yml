@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: flower-platform.jar
+    destination: /home/ec2-user
+file_exists_behavior: OVERWRITE
+hooks:
+  ApplicationStart:
+    - location: start_server.sh
+      timeout: 80
+      runas: root
+  ApplicationStop:
+    - location: stop_server.sh
+      timeout: 30
+      runas: root
+
+
+

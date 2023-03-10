@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn package -Dmaven.test.skip
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/flower-platform.jar
+    - appspec.yml
+    - start_server.sh
+    - stop_server.sh
+    - validate_service.sh
+  discard-paths: yes
