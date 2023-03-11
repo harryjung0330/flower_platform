@@ -1,18 +1,15 @@
 package com.example.flowerplatform.integrationTest;
 
 import com.example.flowerplatform.repository.UserRepository;
-import com.example.flowerplatform.repository.entity.AppUser.AppUser;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
 import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.security.oauth2.CustomAuthorizedClientService;
 import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.After;
-
-import org.junit.Before;
-import org.junit.Test;
-
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,9 +18,9 @@ import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.OAuth2AccessToken;
 import org.springframework.test.annotation.IfProfileValue;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @IfProfileValue(name ="spring.profiles.active", value ="dev")
 @Slf4j
@@ -36,7 +33,7 @@ public class CustomAuthorizedClientServiceTest
     UserRepository userRepository;
 
 
-    @Before
+    @BeforeEach
     public void beforeEachTest(){
         userRepository.deleteAll();
     }
@@ -93,7 +90,7 @@ public class CustomAuthorizedClientServiceTest
         customAuthorizedClientService.saveAuthorizedClient(duplicateAuthorizedClient, principal);
     }
 
-    @After
+    @AfterEach
     public void afterTest(){
         userRepository.deleteAll();
     }

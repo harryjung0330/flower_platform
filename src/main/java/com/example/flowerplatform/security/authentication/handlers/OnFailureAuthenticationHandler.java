@@ -32,7 +32,7 @@ public class OnFailureAuthenticationHandler implements AuthenticationFailureHand
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception)
-            throws IOException, ServletException {
+            throws IOException{
 
         log.debug("onAuthenticationFailure called!");
 
@@ -62,15 +62,6 @@ public class OnFailureAuthenticationHandler implements AuthenticationFailureHand
                 .timestamp(LocalDateTime.now())
                 .build();
 
-        /*
-        MessageFormat messageFormat = MessageFormat.builder()
-                        .data(details)
-                        .message(errorMessage)
-                        .timestamp(new Date())
-                        .build();
-
-
-         */
         objectMapper.writeValue(response.getWriter(),tempErrorMsgDto );
 
         response.flushBuffer();

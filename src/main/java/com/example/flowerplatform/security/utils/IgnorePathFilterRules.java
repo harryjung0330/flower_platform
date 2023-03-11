@@ -1,6 +1,6 @@
 package com.example.flowerplatform.security.utils;
 
-import com.example.flowerplatform.security.filters.JwtAuthorizationFilter;
+import com.example.flowerplatform.security.authorization.JwtAuthorizationFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.web.authentication.AuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;

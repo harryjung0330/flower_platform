@@ -9,18 +9,21 @@ import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
 import com.example.flowerplatform.service.exceptions.DuplicateUserException;
 import com.example.flowerplatform.service.implementation.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.IfProfileValue;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @IfProfileValue(name ="spring.profiles.active", value ="dev")
 @Slf4j
@@ -33,7 +36,7 @@ public class UserServiceImplTest
     UserServiceImpl userServiceImpl;
 
 
-    @Before
+    @BeforeEach
     public void beforeEachTest(){
         userRepository.deleteAll();
     }
@@ -94,7 +97,7 @@ public class UserServiceImplTest
     }
 
 
-    @Test(expected = DuplicateUserException.class)
+    @Test
     public void saveDuplicateUserTest(){
         SaveExternalUserServiceDto dataToTest = SaveExternalUserServiceDto.builder()
                 .authenticationProvider(AuthenticationProvider.GOOGLE)
@@ -102,12 +105,15 @@ public class UserServiceImplTest
                 .registrationId("12312412412")
                 .build();
 
-        for(int i = 0; i < 2; i++) {
-            saveExternalUserAndTest(dataToTest);
-        }
+        assertThrows(DuplicateUserException.class, () -> {
+            for(int i = 0; i < 2; i++) {
+                saveExternalUserAndTest(dataToTest);
+            }
+        });
+
     }
 
-    @Test(expected = OAuth2SaveExternalUserException.class)
+    @Test
     public void saveExternalUserWithInternalProviderTest(){
         SaveExternalUserServiceDto dataToTest = SaveExternalUserServiceDto.builder()
                 .authenticationProvider(AuthenticationProvider.INTERNAL)
@@ -115,10 +121,16 @@ public class UserServiceImplTest
                 .registrationId("12312412412")
                 .build();
 
-        saveExternalUserAndTest(dataToTest);
+        assertThrows(
+                OAuth2SaveExternalUserException.class,
+                ()->{
+                    saveExternalUserAndTest(dataToTest);
+                }
+        );
+
     }
 
-    @After
+    @AfterEach
     public void afterTest(){
         userRepository.deleteAll();
     }

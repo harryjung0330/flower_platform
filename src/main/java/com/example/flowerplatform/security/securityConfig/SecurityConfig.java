@@ -3,14 +3,14 @@ package com.example.flowerplatform.security.securityConfig;
 import com.example.flowerplatform.repository.UserRepository;
 import com.example.flowerplatform.security.authentication.handlers.OnFailureAuthenticationHandler;
 import com.example.flowerplatform.security.authentication.handlers.OnSuccessAuthenticationHandler;
-import com.example.flowerplatform.security.authentication.tokenManager.TokenManagerImplt;
-import com.example.flowerplatform.security.filters.AuthenticationFilter;
-import com.example.flowerplatform.security.filters.JwtAuthorizationExceptionFilter;
-import com.example.flowerplatform.security.filters.JwtAuthorizationFilter;
+import com.example.flowerplatform.security.authentication.filter.AuthenticationFilter;
+import com.example.flowerplatform.security.authorization.JwtAuthorizationExceptionFilter;
+import com.example.flowerplatform.security.authorization.JwtAuthorizationFilter;
 import com.example.flowerplatform.security.oauth2.CustomAuthorizedClientService;
 import com.example.flowerplatform.security.oauth2.CustomStatelessAuthorizationRequestRepository;
 import com.example.flowerplatform.security.oauth2.OAuth2SuccessAndFailureHandlers;
 import com.example.flowerplatform.security.utils.IgnorePathFilterRules;
+import com.example.flowerplatform.util.tokenManager.TokenManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
@@ -22,8 +22,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
+import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
@@ -36,21 +38,17 @@ public class SecurityConfig {
             "/spring/health-check", "/token/re-issue", "/user/login", "/user/register/**", "/user/id-inquiry/**", "/user/pw-inquiry/**", "/user/password/**"
     };
 
-    private final ObjectMapper objectMapper;
+    public static final String LOGIN_PATH = "/user/login";
 
-    private final UserRepository userRepository;
+    private final AbstractAuthenticationProcessingFilter authenticationFilter;
 
-    private final TokenManagerImplt tokenManager;
+    JwtAuthorizationFilter authorizationFilter;
 
-    private static final String LOGIN_PATH = "/user/login";
-
-    private final AuthenticationManager authenticationManager;
+    JwtAuthorizationExceptionFilter authorizationExceptionFilter;
 
     private final OnSuccessAuthenticationHandler onSuccessAuthenticationHandler;
 
     private final OnFailureAuthenticationHandler onFailureAuthenticationHandler;
-
-    private final Validator validator;
 
     private final IgnorePathFilterRules ignorePathFilterRules;
 
@@ -66,11 +64,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
 
+        //make this app stateless
         http.formLogin().disable();
         http.httpBasic().disable();
         http.csrf().disable();
-
-
 
         http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
@@ -89,12 +86,9 @@ public class SecurityConfig {
 
         http.oauth2Login(config -> {
 
-
             config.authorizationEndpoint(subconfig -> {
                 subconfig.authorizationRequestRepository(this.customStatelessAuthorizationRequestRepository);
             });
-
-
 
             config.authorizedClientService(customAuthorizedClientService);
 
@@ -106,23 +100,12 @@ public class SecurityConfig {
         http.authorizeHttpRequests()
                 .anyRequest().permitAll();
 
-
-
-
         return http.build();
     }
 
 
     private void addAuthenticationFilter(HttpSecurity http) throws Exception
     {
-        //set authentication filter
-        AuthenticationFilter authenticationFilter =
-                new AuthenticationFilter(
-                        new MvcRequestMatcher(new HandlerMappingIntrospector(),
-                                LOGIN_PATH),
-                        authenticationManager,
-                        validator,
-                        objectMapper);
 
         authenticationFilter.setAuthenticationSuccessHandler(onSuccessAuthenticationHandler);
         authenticationFilter.setAuthenticationFailureHandler(onFailureAuthenticationHandler);
@@ -132,19 +115,8 @@ public class SecurityConfig {
 
     private void addAuthorizationFilter(HttpSecurity http)
     {
-        JwtAuthorizationFilter jwtAuthorizationFilter = new JwtAuthorizationFilter(
-                authenticationManager,
-                userRepository,
-                tokenManager,
-                ignorePathFilterRules);
-
-
-        JwtAuthorizationExceptionFilter jwtAuthorizationExceptionFilter = new JwtAuthorizationExceptionFilter(
-                objectMapper
-        );
-
-        http.addFilterAfter(jwtAuthorizationExceptionFilter, UsernamePasswordAuthenticationFilter.class);
-        http.addFilterAfter(jwtAuthorizationFilter, JwtAuthorizationExceptionFilter.class);
+        http.addFilterAfter(authorizationExceptionFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterAfter(authorizationFilter, JwtAuthorizationExceptionFilter.class);
 
     }
 

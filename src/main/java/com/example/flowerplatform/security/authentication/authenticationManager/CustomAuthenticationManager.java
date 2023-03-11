@@ -1,6 +1,5 @@
 package com.example.flowerplatform.security.authentication.authenticationManager;
 
-import com.example.flowerplatform.security.authentication.authenticationProvider.EmailAuthenticationProvider;
 import com.example.flowerplatform.security.authentication.exceptions.UnsupportedTokenTypeException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,8 +8,6 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Component

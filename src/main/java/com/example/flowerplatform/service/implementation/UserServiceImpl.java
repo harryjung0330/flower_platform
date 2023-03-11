@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService
                     .authenticationProvider(saveExternalUserServiceDto.getAuthenticationProvider())
                     .build();
 
-            if (saveExternalUserServiceDto.getAuthenticationProvider().equals(AuthenticationProvider.INTERNAL))
+            if (saveExternalUserServiceDto.getAuthenticationProvider() == AuthenticationProvider.INTERNAL)
                 throw new OAuth2SaveExternalUserException("external user cannot have AuthenticationProvider INTERNAL!");
 
 

@@ -3,14 +3,14 @@ package com.example.flowerplatform.security.oauth2;
 import com.example.flowerplatform.dto.MessageFormat;
 import com.example.flowerplatform.repository.entity.AppUser.AppUser;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
-import com.example.flowerplatform.security.authentication.tokenManager.TokenManager;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.token.JwtAccessToken;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.token.JwtRefreshToken;
+import com.example.flowerplatform.util.tokenManager.TokenManager;
+import com.example.flowerplatform.util.tokenManager.implementations.properties.TokenProperties;
+import com.example.flowerplatform.util.tokenManager.implementations.token.JwtAccessToken;
+import com.example.flowerplatform.util.tokenManager.implementations.token.JwtRefreshToken;
 import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.security.oauth2.dto.TokenDto;
 import com.example.flowerplatform.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -33,8 +33,6 @@ import java.util.Date;
 @RequiredArgsConstructor
 public class OAuth2SuccessAndFailureHandlers {
 
-    private static final int ACCESS_TOKEN_DURATION_IN_MIN = 5;
-    private static final int REFRESH_TOKEN_DURATION_IN_MIN = 3; //60 * 24 * 30;   //30 days
 
     private final TokenManager tokenManager;
 
@@ -123,7 +121,7 @@ public class OAuth2SuccessAndFailureHandlers {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(createdAt);
-        calendar.add(Calendar.MINUTE, ACCESS_TOKEN_DURATION_IN_MIN);
+        calendar.add(Calendar.MINUTE, TokenProperties.ACCESS_TOKEN_DURATION_MIN);
 
         Date expiresAt = calendar.getTime();
 
@@ -143,7 +141,7 @@ public class OAuth2SuccessAndFailureHandlers {
 
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(createdAt);
-        calendar.add(Calendar.MINUTE, REFRESH_TOKEN_DURATION_IN_MIN);
+        calendar.add(Calendar.MINUTE, TokenProperties.REFRESH_TOKEN_DURATION_MIN);
 
         Date expiresAt = calendar.getTime();
 

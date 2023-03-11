@@ -2,30 +2,29 @@ package com.example.flowerplatform.integrationTest;
 
 import com.example.flowerplatform.repository.SessionRepository;
 import com.example.flowerplatform.repository.entity.Session;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.token.JwtAccessToken;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.token.JwtRefreshToken;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.tokenManager.TokenManagerImpl;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.tokenWorkers.JwtAccessTokenWorker;
-import com.example.flowerplatform.security.authentication.tokenManager.implementations.tokenWorkers.JwtRefreshTokenWorker;
+import com.example.flowerplatform.util.tokenManager.implementations.token.JwtAccessToken;
+import com.example.flowerplatform.util.tokenManager.implementations.token.JwtRefreshToken;
+import com.example.flowerplatform.util.tokenManager.implementations.tokenManager.TokenManagerImpl;
+import com.example.flowerplatform.util.tokenManager.implementations.tokenWorkers.JwtAccessTokenWorker;
+import com.example.flowerplatform.util.tokenManager.implementations.tokenWorkers.JwtRefreshTokenWorker;
 import com.example.flowerplatform.security.authentication.userDetails.Role;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Calendar;
 import java.util.Date;
 import static org.junit.Assert.*;
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = {JwtRefreshTokenWorker.class, JwtAccessTokenWorker.class, TokenManagerImpl.class})
 @Slf4j
 public class TokenManagerImplTest
