@@ -45,7 +45,38 @@ dependencies {
 	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 
 }
+bootRun {
+	String activeProfile = Project.properties['spring.profiles.active']
+	println "zone: $activeProfile"
+	systemProperty "spring.profiles.active", activeProfile
+
+	String jasyptPassword = Project.properties['jasypt.encryptor.password']
+	systemProperty "jasypt.encryptor.password", jasyptPassword
+
+}
+
+task printSourceSetInformation(){
+
+	doLast{
+		sourceSets.each { srcSet ->
+			println "["+srcSet.name+"]"
+			print "-->Source directories: "+srcSet.allJava.srcDirs+"\n"
+			print "-->Output directories: "+srcSet.output.classesDirs.files+"\n"
+			print "-->Compile classpath:\n"
+			srcSet.compileClasspath.files.each {
+				print "  "+it.path+"\n"
+			}
+			println ""
+		}
+	}
+}
 
 tasks.named('test') {
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+
+	systemProperty "spring.profiles.active", project.getProperty("spring.profiles.active")
+	systemProperty "jasypt.encryptor.password", project.getProperty("jasypt.encryptor.password")
 	useJUnitPlatform()
 }

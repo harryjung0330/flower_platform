@@ -5,31 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/FlowerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/FlowerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/TokenVerifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/dto/VerifyTokenResultDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtCreationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtMalformedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/jwt/exception/JwtNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomAuthorizedClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomAuthorizedClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomStatelessAuthorizationRequestRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomStatelessAuthorizationRequestRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/SuccessAndFailureHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/FlowerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/FlowerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/ObjectMapperConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/ObjectMapperConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/FlowerPlatformApplication.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AppAppUserDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/AppAppUserDetailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthenticationManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/CustomAuthenticationManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthorizedClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/CustomAuthorizedClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/EmailAuthenticationProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/EmailAuthenticationProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/JwtAccessTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtRefreshTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/JwtRefreshTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/OAuth2SuccessAndFailureHandlersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/OAuth2SuccessAndFailureHandlersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/SessionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/SessionRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserRepositoryTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/UserRepositoryTestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,21 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,24 +74,25 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MoFrrRdOLMMpinfqoLAOnYyyZy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jeongsang-won/Documents/flower-startup/development/spring&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-17",
+    "last_opened_file_path": "/Users/jeongsang-won/Documents/flower-startup/development/spring"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Gradle.EmailAuthenticationProviderTest">
     <configuration name="FlowerPlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="jasypt.encryptor.password" value="asssvdabamkklkslkdmfsllaannkjnujasdf" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.example.flowerplatform.FlowerPlatformApplication" />
-      <module name="flower-platform.main" />
       <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
       <extension name="coverage">
         <pattern>
@@ -104,6 +119,95 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmailAuthenticationProviderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="jasypt.encryptor.password" value="asssvdabamkklkslkdmfsllaannkjnujasdf" />
+          </map>
+        </option>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.flowerplatform.EmailAuthenticationProviderTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" value="-Dspring.profiles.active=dev" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring [printSourceSetInformation]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="printSourceSetInformation" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
@@ -120,8 +224,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.EmailAuthenticationProviderTest" />
+      <item itemvalue="Gradle.spring [printSourceSetInformation]" />
+      <item itemvalue="Gradle.spring [test]" />
+      <item itemvalue="애플리케이션.FlowerPlatformApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.EmailAuthenticationProviderTest" />
+        <item itemvalue="Gradle.spring [printSourceSetInformation]" />
+        <item itemvalue="Gradle.spring [test]" />
         <item itemvalue="애플리케이션.FlowerPlatformApplication" />
       </list>
     </recent_temporary>
@@ -136,5 +249,16 @@
       <updated>1678426229585</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

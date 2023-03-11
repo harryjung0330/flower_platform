@@ -34,7 +34,7 @@ import java.util.Date;
 public class OAuth2SuccessAndFailureHandlers {
 
     private static final int ACCESS_TOKEN_DURATION_IN_MIN = 5;
-    private static final int REFRESH_TOKEN_DURATION_IN_MIN = 60 * 24 * 30;   //30 days
+    private static final int REFRESH_TOKEN_DURATION_IN_MIN = 3; //60 * 24 * 30;   //30 days
 
     private final TokenManager tokenManager;
 
