@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Calendar;
 import java.util.Date;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @Slf4j
 public class JwtAccessTokenWorkerTest

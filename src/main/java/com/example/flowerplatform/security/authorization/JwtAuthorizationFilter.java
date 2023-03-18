@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Slf4j
-@Component
+//@Component
 public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
 
     private final TokenManager tokenManager;

@@ -22,7 +22,6 @@ import org.springframework.security.authentication.AuthenticationServiceExceptio
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,9 +31,6 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 
-
-
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = {AuthenticationFilter.class})
 @Slf4j
 public class AuthenticationFilterTest {

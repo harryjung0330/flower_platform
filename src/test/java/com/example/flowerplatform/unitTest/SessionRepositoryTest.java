@@ -23,7 +23,6 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @Slf4j
 @ActiveProfiles(profiles = "dev")

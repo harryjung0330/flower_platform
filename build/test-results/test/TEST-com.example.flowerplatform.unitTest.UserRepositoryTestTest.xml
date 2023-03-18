@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.flowerplatform.unitTest.UserRepositoryTestTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-18T04:52:53" hostname="jeongsang-won-ui-MacBookAir.local" time="0.057">
+  <properties/>
+  <testcase name="testFindByRegistrationIdAndAuthProvider()" classname="com.example.flowerplatform.unitTest.UserRepositoryTestTest" time="0.044"/>
+  <testcase name="testSaveExternalUser()" classname="com.example.flowerplatform.unitTest.UserRepositoryTestTest" time="0.006"/>
+  <testcase name="testSaveInternalUser()" classname="com.example.flowerplatform.unitTest.UserRepositoryTestTest" time="0.007"/>
+  <system-out><![CDATA[2023-03-18T13:52:53.136+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [UserRepositoryTestTest]: using SpringBootContextLoader
+2023-03-18T13:52:53.137+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.flowerplatform.unitTest.UserRepositoryTestTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-03-18T13:52:53.137+09:00  INFO 85348 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.flowerplatform.unitTest.UserRepositoryTestTest]: UserRepositoryTestTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-18T13:52:53.137+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using ContextCustomizers for test class [UserRepositoryTestTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+2023-03-18T13:52:53.137+09:00  INFO 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.flowerplatform.FlowerPlatformApplication for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners for test class [UserRepositoryTestTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test class: class [UserRepositoryTestTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 499, missCount = 7]
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 500, missCount = 7]
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 501, missCount = 7]
+2023-03-18T13:52:53.138+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 502, missCount = 7]
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test method: class [UserRepositoryTestTest], method [testFindByRegistrationIdAndAuthProvider], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 503, missCount = 7]
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 504, missCount = 7]
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1949603183<open>)] for JPA transaction
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.139+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5376b688]
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083).role]
+
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083))@417386789 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.140+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [0] - [11]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Hydrated EntityKey (com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083)): 11
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Created new entity instance [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083)#11] : AppUser(id=11, email=null, password=null, role=REGISTRATION_NOT_COMPLETE_USER, authenticationProvider=null, registrationId=null)
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [1] - [GOOGLE]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [2] - [null]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [3] - [null]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [4] - [011111123]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [5] - [USER]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Done materializing entityInstance : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304855618083)#11
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.loading        : Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@18f9bc99
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1949603183<open>)]
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=GOOGLE, password=null, role=USER, registrationId=011111123, id=11, email=null}
+2023-03-18T13:52:53.141+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1949603183<open>)] after transaction
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : HHH000420: Closing un-released batch
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 505, missCount = 7]
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1702130449<open>)] for JPA transaction
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6ddbb0e8]
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+2023-03-18T13:52:53.142+09:00 DEBUG 85348 --- [    Test worker] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 12
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1702130449<open>)]
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=GOOGLE, password=null, role=USER, registrationId=011111123, id=12, email=null}
+2023-03-18T13:52:53.143+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1702130449<open>)] after transaction
+2023-03-18T13:52:53.145+09:00 DEBUG 85348 --- [    Test worker] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2023-03-18T13:52:53.173+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.173+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.175+09:00 DEBUG 85348 --- [    Test worker] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@5fea6cdb
+2023-03-18T13:52:53.175+09:00 DEBUG 85348 --- [    Test worker] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).registrationId) 
+2023-03-18T13:52:53.176+09:00 DEBUG 85348 --- [    Test worker] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmParameter : org.hibernate.query.sqm.tree.expression.SqmJpaCriteriaParameterWrapper@2f539c9b
+2023-03-18T13:52:53.176+09:00 DEBUG 85348 --- [    Test worker] o.h.q.sqm.sql.BaseSqmToSqlAstConverter   : Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).authenticationProvider) 
+2023-03-18T13:52:53.176+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250).role]
+
+2023-03-18T13:52:53.176+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250))@1588695735 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0 
+    where
+        a1_0.registration_id=? 
+        and a1_0.authentication_provider=?
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0 
+    where
+        a1_0.registration_id=? 
+        and a1_0.authentication_provider=?
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [0] - [12]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Hydrated EntityKey (com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250)): 12
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Created new entity instance [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250)#12] : AppUser(id=12, email=null, password=null, role=REGISTRATION_NOT_COMPLETE_USER, authenticationProvider=null, registrationId=null)
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [1] - [GOOGLE]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [2] - [null]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [3] - [null]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [4] - [011111123]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [5] - [USER]
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Done materializing entityInstance : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304674896250)#12
+2023-03-18T13:52:53.177+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.loading        : Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@7b35798b
+2023-03-18T13:52:53.178+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 506, missCount = 7]
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(127927366<open>)] for JPA transaction
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@50f77755]
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666).role]
+
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666))@1894207825 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.179+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [0] - [12]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Hydrated EntityKey (com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666)): 12
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Created new entity instance [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666)#12] : AppUser(id=12, email=null, password=null, role=REGISTRATION_NOT_COMPLETE_USER, authenticationProvider=null, registrationId=null)
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [1] - [GOOGLE]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [2] - [null]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [3] - [null]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [4] - [011111123]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [5] - [USER]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Done materializing entityInstance : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304894796666)#12
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.loading        : Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@cc7eeb1
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(127927366<open>)]
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=GOOGLE, password=null, role=USER, registrationId=011111123, id=12, email=null}
+2023-03-18T13:52:53.180+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+2023-03-18T13:52:53.181+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(127927366<open>)] after transaction
+2023-03-18T13:52:53.181+09:00 DEBUG 85348 --- [    Test worker] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : HHH000420: Closing un-released batch
+2023-03-18T13:52:53.181+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 507, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 508, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 509, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 510, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 511, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 512, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test method: class [UserRepositoryTestTest], method [testFindByRegistrationIdAndAuthProvider], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Resetting RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 513, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 514, missCount = 7]
+2023-03-18T13:52:53.182+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 515, missCount = 7]
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test method: class [UserRepositoryTestTest], method [testSaveExternalUser], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 516, missCount = 7]
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 517, missCount = 7]
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(657670477<open>)] for JPA transaction
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.183+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@24d18d17]
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458).role]
+
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304899554458))@32401843 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(657670477<open>)]
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(657670477<open>)] after transaction
+2023-03-18T13:52:53.184+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 518, missCount = 7]
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(27122318<open>)] for JPA transaction
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@734c98ff]
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 13
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(27122318<open>)]
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=GOOGLE, password=null, role=USER, registrationId=011111123, id=13, email=null}
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(27122318<open>)] after transaction
+2023-03-18T13:52:53.185+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 519, missCount = 7]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1176808758<open>)] for JPA transaction
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@119eb15]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041).role]
+
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041))@282752662 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [0] - [13]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Hydrated EntityKey (com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041)): 13
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Created new entity instance [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041)#13] : AppUser(id=13, email=null, password=null, role=REGISTRATION_NOT_COMPLETE_USER, authenticationProvider=null, registrationId=null)
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [1] - [GOOGLE]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [2] - [null]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [3] - [null]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [4] - [011111123]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [5] - [USER]
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Done materializing entityInstance : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304901680041)#13
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.loading        : Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@36db2ef8
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.186+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1176808758<open>)]
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=GOOGLE, password=null, role=USER, registrationId=011111123, id=13, email=null}
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1176808758<open>)] after transaction
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : HHH000420: Closing un-released batch
+2023-03-18T13:52:53.187+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 520, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 521, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 522, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 523, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 524, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 525, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test method: class [UserRepositoryTestTest], method [testSaveExternalUser], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Resetting RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 526, missCount = 7]
+2023-03-18T13:52:53.188+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 527, missCount = 7]
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 528, missCount = 7]
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test method: class [UserRepositoryTestTest], method [testSaveInternalUser], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 529, missCount = 7]
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 530, missCount = 7]
+2023-03-18T13:52:53.189+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1063291870<open>)] for JPA transaction
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@49c3f97e]
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583).role]
+
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304905667583))@214350510 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.190+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1063291870<open>)]
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1063291870<open>)] after transaction
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 531, missCount = 7]
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(798247486<open>)] for JPA transaction
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@163e86a8]
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users
+        (user_id, authentication_provider, email, password, registration_id, role) 
+    values
+        (default, ?, ?, ?, ?, ?)
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 14
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(798247486<open>)]
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.191+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=null, password=helloWorld!, role=REGISTRATION_NOT_COMPLETE_USER, registrationId=null, id=14, email=randomUser@gmail.com}
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(798247486<open>)] after transaction
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 532, missCount = 7]
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteAll]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1061226313<open>)] for JPA transaction
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : begin
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7acb4a51]
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Created new SQL alias : a1_0
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.create         : Registration of TableGroup [StandardTableGroup(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333))] with identifierForTableGroup [com.example.flowerplatform.repository.entity.AppUser.AppUser] for NavigablePath [com.example.flowerplatform.repository.entity.AppUser.AppUser] 
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.graph.AST      : DomainResult Graph:
+ \-EntityResultImpl [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333)]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333).authenticationProvider]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333).email]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333).password]
+ |  +-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333).registrationId]
+ |  \-BasicFetch [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333).role]
+
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.ast.tree           : SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (a1 : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333)) {
+          primaryTableReference : users as a1_0
+        }
+      }
+    }
+
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.sql.exec               : Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Initializer list
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                :     com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333) -> EntityResultInitializer(com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333))@591897729 (SingleTableEntityPersister(com.example.flowerplatform.repository.entity.AppUser.AppUser))
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+Hibernate: 
+    select
+        a1_0.user_id,
+        a1_0.authentication_provider,
+        a1_0.email,
+        a1_0.password,
+        a1_0.registration_id,
+        a1_0.role 
+    from
+        users a1_0
+2023-03-18T13:52:53.192+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [0] - [14]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Hydrated EntityKey (com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333)): 14
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Created new entity instance [com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333)#14] : AppUser(id=14, email=null, password=null, role=REGISTRATION_NOT_COMPLETE_USER, authenticationProvider=null, registrationId=null)
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [1] - [null]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [2] - [randomUser@gmail.com]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [3] - [helloWorld!]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [4] - [null]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results                : Extracted JDBC value [5] - [REGISTRATION_NOT_COMPLETE_USER]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.orm.results.loading.entity   : (EntityResultInitializer) Done materializing entityInstance : com.example.flowerplatform.repository.entity.AppUser.AppUser(5304907991333)#14
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.orm.results.loading        : Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@332c14f2
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.j.internal.PersistenceUnitUtilImpl   : jakarta.persistence.PersistenceUnitUtil.getIdentifier is only intended to work with enhanced entities (although Hibernate also adapts this support to its proxies); however the passed entity was not enhanced (nor a proxy).. may not be able to read identifier
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1061226313<open>)]
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.e.t.internal.TransactionImpl         : committing
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] o.hibernate.internal.util.EntityPrinter  : com.example.flowerplatform.repository.entity.AppUser.AppUser{authenticationProvider=null, password=helloWorld!, role=REGISTRATION_NOT_COMPLETE_USER, registrationId=null, id=14, email=randomUser@gmail.com}
+2023-03-18T13:52:53.193+09:00 DEBUG 85348 --- [    Test worker] org.hibernate.SQL                        : 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        user_id=?
+2023-03-18T13:52:53.194+09:00 DEBUG 85348 --- [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1061226313<open>)] after transaction
+2023-03-18T13:52:53.194+09:00 DEBUG 85348 --- [    Test worker] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : HHH000420: Closing un-released batch
+2023-03-18T13:52:53.194+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 533, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 534, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 535, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 536, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 537, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 538, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test method: class [UserRepositoryTestTest], method [testSaveInternalUser], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Resetting RequestContextHolder for test class com.example.flowerplatform.unitTest.UserRepositoryTestTest
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 7, maxSize = 32, parentContextCount = 0, hitCount = 539, missCount = 7]
+2023-03-18T13:52:53.195+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test class: class [UserRepositoryTestTest], class annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -10,116 +10,32 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/authenticationManager/CustomAuthenticationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/authenticationManager/CustomAuthenticationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnFailureAuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnFailureAuthenticationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/TokenCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/TokenManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/TokenManagerImplt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/TokenVerifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/TokenWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/dto/VerifyTokenResultDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtCreationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtMalformedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/exception/TokenTypeNotSupportedException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/properties/TokenProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtAccessToken$JwtAccessTokenBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtAccessToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtRefreshToken$JwtRefreshTokenBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtRefreshToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenManager/TokenManagerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenWorkers/JwtAccessTokenWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenWorkers/JwtRefreshTokenWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/AuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationExceptionFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/utils/IgnorePathFilterRules.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/utils/IgnorePathFilterRules.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/implementation/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/implementation/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/AppAppUserDetailTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/CustomAuthenticationManagerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/CustomAuthorizedClientServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/EmailAuthenticationProviderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/JwtAccessTokenWorkerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/JwtRefreshTokenWorkerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/OAuth2SuccessAndFailureHandlersTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/SessionRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/UserRepositoryTestTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/UserServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/CustomAuthorizedClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/CustomAuthorizedClientServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/TokenManagerImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/TokenManagerImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/UserServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/example/flowerplatform/integrationTest/UserServiceImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/flower-platform-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/flower-platform-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.example.flowerplatform.EmailAuthenticationProviderTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.example.flowerplatform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.example.flowerplatform.EmailAuthenticationProviderTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/EmailAuthenticationProviderTest.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/authenticationManager/CustomAuthenticationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/authenticationManager/CustomAuthenticationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnFailureAuthenticationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnFailureAuthenticationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/TokenCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/TokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/TokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/TokenManagerImplt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/TokenVerifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/TokenWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/TokenWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/dto/VerifyTokenResultDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/dto/VerifyTokenResultDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtCreationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/exception/JwtCreationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtMalformedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/exception/JwtMalformedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/exception/JwtNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/exception/JwtNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/exception/TokenTypeNotSupportedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/exception/TokenTypeNotSupportedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/properties/TokenProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/properties/TokenProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtAccessToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/token/JwtAccessToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/token/JwtRefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/token/JwtRefreshToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenManager/TokenManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/tokenManager/TokenManagerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenWorkers/JwtAccessTokenWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/tokenWorkers/JwtAccessTokenWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/tokenManager/implementations/tokenWorkers/JwtRefreshTokenWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/util/tokenManager/implementations/tokenWorkers/JwtRefreshTokenWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/filters/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/filters/JwtAuthorizationExceptionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authorization/JwtAuthorizationExceptionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/filters/JwtAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authorization/JwtAuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/securityConfig/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/securityConfig/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authorization/JwtAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authorization/JwtAuthorizationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/utils/IgnorePathFilterRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/utils/IgnorePathFilterRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/service/implementation/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/AppAppUserDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AppAppUserDetailTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/CustomAuthenticationManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthenticationManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/CustomAuthorizedClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthorizedClientServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/EmailAuthenticationProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/EmailAuthenticationProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/JwtAccessTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/JwtRefreshTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtRefreshTokenWorkerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/OAuth2SuccessAndFailureHandlersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/OAuth2SuccessAndFailureHandlersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/SessionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/SessionRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/UserRepositoryTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserRepositoryTestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/CustomAuthorizedClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/CustomAuthorizedClientServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/TokenManagerImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/TokenManagerImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/integrationTest/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AppAppUserDetailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AppAppUserDetailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthenticationFilterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthenticationFilterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthorizationFilterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthorizationFilterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthenticationManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthenticationManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthorizedClientServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/CustomAuthorizedClientServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/EmailAuthenticationProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/EmailAuthenticationProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtRefreshTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtRefreshTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/OAuth2SuccessAndFailureHandlersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/OAuth2SuccessAndFailureHandlersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/SessionRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/SessionRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserRepositoryTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserRepositoryTestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stop_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/stop_server.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,18 +95,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jeongsang-won/Documents/flower-startup/development/spring&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-17",
+    "last_opened_file_path": "/Users/jeongsang-won/Documents/flower-startup/development/spring",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.AuthorizationFilterTest.doFilterInternalTest">
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.FlowerPlatformApplication">
+    <configuration name="FlowerPlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.flowerplatform.FlowerPlatformApplication" />
+      <module name="flower-platform.main" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev -Djasypt.encryptor.password=asssvdabamkklkslkdmfsllaannkjnujasdf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.flowerplatform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
@@ -201,7 +137,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationFilterTest.attemptSauccessAuthenticationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AppAppUserDetailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="jasypt.encryptor.password" value="asssvdabamkklkslkdmfsllaannkjnujasdf" />
+            <entry key="spring.profiles.active" value="dev " />
+          </map>
+        </option>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.flowerplatform.unitTest.AppAppUserDetailTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtRefreshTokenWorkerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -214,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.AuthenticationFilterTest.attemptSauccessAuthenticationTest&quot;" />
+            <option value="&quot;com.example.flowerplatform.unitTest.JwtRefreshTokenWorkerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,7 +189,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AuthenticationFilterTest.attemptWrongMethodAuthenticationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SpringCorePracticeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -237,7 +202,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.AuthenticationFilterTest.attemptWrongMethodAuthenticationTest&quot;" />
+            <option value="&quot;com.example.flowerplatform.SpringCorePracticeTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,7 +212,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AuthorizationFilterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SpringCorePracticeTest.beanDefinitionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -260,53 +225,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.AuthorizationFilterTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthorizationFilterTest.doFilterInternalTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.AuthorizationFilterTest.doFilterInternalTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FlowerPlatformApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.FlowerPlatformApplicationTests.contextLoads&quot;" />
+            <option value="&quot;com.example.flowerplatform.SpringCorePracticeTest.beanDefinitionTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -352,19 +271,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.AuthenticationFilterTest.attemptSauccessAuthenticationTest" />
-      <item itemvalue="Gradle.AuthenticationFilterTest.attemptWrongMethodAuthenticationTest" />
-      <item itemvalue="Gradle.AuthorizationFilterTest" />
-      <item itemvalue="Gradle.AuthorizationFilterTest.doFilterInternalTest" />
-      <item itemvalue="Gradle.FlowerPlatformApplicationTests.contextLoads" />
+      <item itemvalue="Gradle.AppAppUserDetailTest" />
+      <item itemvalue="Gradle.JwtRefreshTokenWorkerTest" />
+      <item itemvalue="Gradle.SpringCorePracticeTest" />
+      <item itemvalue="Gradle.SpringCorePracticeTest.beanDefinitionTest" />
+      <item itemvalue="애플리케이션.FlowerPlatformApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AuthorizationFilterTest.doFilterInternalTest" />
-        <item itemvalue="Gradle.AuthorizationFilterTest" />
-        <item itemvalue="Gradle.FlowerPlatformApplicationTests.contextLoads" />
-        <item itemvalue="Gradle.AuthenticationFilterTest.attemptSauccessAuthenticationTest" />
-        <item itemvalue="Gradle.AuthenticationFilterTest.attemptWrongMethodAuthenticationTest" />
+        <item itemvalue="애플리케이션.FlowerPlatformApplication" />
+        <item itemvalue="Gradle.AppAppUserDetailTest" />
+        <item itemvalue="Gradle.JwtRefreshTokenWorkerTest" />
+        <item itemvalue="Gradle.SpringCorePracticeTest" />
+        <item itemvalue="Gradle.SpringCorePracticeTest.beanDefinitionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -395,7 +314,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthenticationFilterTest.java</url>
-          <line>94</line>
+          <line>90</line>
           <properties class="com.example.flowerplatform.unitTest.AuthenticationFilterTest" method="attemptWrongMethodAuthenticationTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -404,7 +323,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/AuthorizationFilterTest.java</url>
-          <line>62</line>
+          <line>42</line>
           <properties class="com.example.flowerplatform.unitTest.AuthorizationFilterTest" method="doFilterInternalTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

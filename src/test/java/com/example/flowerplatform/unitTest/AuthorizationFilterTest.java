@@ -16,14 +16,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.util.Date;
 
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = {JwtAuthorizationFilter.class})
 @Slf4j
 public class AuthorizationFilterTest

@@ -26,7 +26,6 @@ import java.util.Optional;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest  //class를 지정하면, ObjectMapper가 LocalTime을 제대로 변환을 못하는 에러때문에, class를 지정하지 않았습니다.
 @Slf4j
 public class OAuth2SuccessAndFailureHandlersTest

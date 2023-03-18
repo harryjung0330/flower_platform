@@ -23,7 +23,7 @@ public class IgnorePathFilterRules
             "/spring/health-check", "/token/re-issue", "/user/login", "/oauth2/authorization/**", "/login/oauth2/code/**");
 
     List<String> authorizationIgnorePaths = List.of(
-            "/spring/health-check", "/token/re-issue", "/user/login", "/oauth2/authorization/**", "/login/oauth2/code/**");
+            "/spring/health-check", "/token/re-issue", "/user/login", "/oauth2/authorization/**", "/login/oauth2/code/**", "/actuator/**");
 
     Map< Class<? extends Filter>, List<AntPathRequestMatcher>> ignoreMap;
 

@@ -24,7 +24,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = {JwtRefreshTokenWorker.class, JwtAccessTokenWorker.class, TokenManagerImpl.class})
 @Slf4j
 public class TokenManagerImplTest

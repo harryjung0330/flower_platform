@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  parameter-store:
+    JASYPT_KEY: "/test/web-server/jasypt-key"
 
 phases:
   install:
@@ -7,13 +10,13 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn package -Dmaven.test.skip
+      - gradle clean build -Pspring.profiles.active=dev -Pjasypt.encryptor.password=$(echo JASYPT_KEY)
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/flower-platform.jar
+    - build/libs/flower-platform.jar
     - appspec.yml
     - start_server.sh
     - stop_server.sh

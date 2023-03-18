@@ -80,3 +80,7 @@ tasks.named('test') {
 	systemProperty "jasypt.encryptor.password", project.getProperty("jasypt.encryptor.password")
 	useJUnitPlatform()
 }
+
+bootJar {
+	archiveFileName = "flower-platform.jar"
+}

@@ -19,7 +19,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles(profiles = "dev")
 @IfProfileValue(name ="spring.profiles.active", value ="dev")

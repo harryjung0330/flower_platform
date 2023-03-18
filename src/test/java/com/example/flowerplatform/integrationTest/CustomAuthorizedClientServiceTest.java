@@ -20,7 +20,7 @@ import org.springframework.security.oauth2.core.OAuth2AccessToken;
 import org.springframework.test.annotation.IfProfileValue;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ExtendWith(SpringExtension.class)
+
 @SpringBootTest
 @IfProfileValue(name ="spring.profiles.active", value ="dev")
 @Slf4j

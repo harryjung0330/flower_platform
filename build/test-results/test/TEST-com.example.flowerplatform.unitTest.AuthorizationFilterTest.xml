@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.flowerplatform.unitTest.AuthorizationFilterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-18T04:52:51" hostname="jeongsang-won-ui-MacBookAir.local" time="0.091">
+  <properties/>
+  <testcase name="doFilterInternalTest()" classname="com.example.flowerplatform.unitTest.AuthorizationFilterTest" time="0.091"/>
+  <system-out><![CDATA[2023-03-18T13:52:51.567+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [AuthorizationFilterTest]: using SpringBootContextLoader
+2023-03-18T13:52:51.567+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.flowerplatform.unitTest.AuthorizationFilterTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-03-18T13:52:51.568+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using ContextCustomizers for test class [AuthorizationFilterTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+2023-03-18T13:52:51.569+09:00 DEBUG 85348 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners for test class [AuthorizationFilterTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+2023-03-18T13:52:51.569+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test class: class [AuthorizationFilterTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:51.579+09:00 DEBUG 85348 --- [    Test worker] .s.b.w.s.c.ApplicationServletEnvironment : Activating profiles [dev]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.3)
+
+2023-03-18T13:52:51.581+09:00  INFO 85348 --- [    Test worker] c.e.f.unitTest.AuthorizationFilterTest   : Starting AuthorizationFilterTest using Java 19.0.2 with PID 85348 (started by jeongsang-won in /Users/jeongsang-won/Documents/flower-startup/development/spring)
+2023-03-18T13:52:51.581+09:00 DEBUG 85348 --- [    Test worker] c.e.f.unitTest.AuthorizationFilterTest   : Running with Spring Boot v3.0.3, Spring v6.0.5
+2023-03-18T13:52:51.581+09:00  INFO 85348 --- [    Test worker] c.e.f.unitTest.AuthorizationFilterTest   : The following 1 profile is active: "dev"
+2023-03-18T13:52:51.581+09:00 DEBUG 85348 --- [    Test worker] o.s.boot.SpringApplication               : Loading source class com.example.flowerplatform.security.authorization.JwtAuthorizationFilter
+2023-03-18T13:52:51.582+09:00 DEBUG 85348 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@249a7ccc
+2023-03-18T13:52:51.582+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-03-18T13:52:51.582+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory'
+2023-03-18T13:52:51.583+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+2023-03-18T13:52:51.630+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-03-18T13:52:51.630+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.u.c.s.UiApplicationContextUtils      : Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@2dc199d4]
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Creating shared instance of singleton bean 'jwtAuthorizationFilter'
+2023-03-18T13:52:51.631+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jwtAuthorizationFilter' via constructor to bean named 'org.springframework.security.authentication.AuthenticationManager#0'
+2023-03-18T13:52:51.632+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jwtAuthorizationFilter' via constructor to bean named 'com.example.flowerplatform.util.tokenManager.TokenManager#0'
+2023-03-18T13:52:51.632+09:00 DEBUG 85348 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Autowiring by type from bean name 'jwtAuthorizationFilter' via constructor to bean named 'com.example.flowerplatform.security.utils.IgnorePathFilterRules#0'
+2023-03-18T13:52:51.633+09:00 DEBUG 85348 --- [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase -2147483647
+2023-03-18T13:52:51.633+09:00 DEBUG 85348 --- [    Test worker] o.s.c.support.DefaultLifecycleProcessor  : Successfully started bean 'springBootLoggingLifecycle'
+2023-03-18T13:52:51.633+09:00  INFO 85348 --- [    Test worker] c.e.f.unitTest.AuthorizationFilterTest   : Started AuthorizationFilterTest in 0.063 seconds (process running for 4.088)
+2023-03-18T13:52:51.633+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 222, missCount = 4]
+2023-03-18T13:52:51.633+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Setting up MockHttpServletRequest, MockHttpServletResponse, ServletWebRequest, and RequestContextHolder for test class com.example.flowerplatform.unitTest.AuthorizationFilterTest
+2023-03-18T13:52:51.634+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 223, missCount = 4]
+2023-03-18T13:52:51.634+09:00 DEBUG 85348 --- [    Test worker] DependencyInjectionTestExecutionListener : Performing dependency injection for test class com.example.flowerplatform.unitTest.AuthorizationFilterTest
+2023-03-18T13:52:51.634+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 224, missCount = 4]
+2023-03-18T13:52:51.634+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 225, missCount = 4]
+2023-03-18T13:52:51.635+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : Before test method: class [AuthorizationFilterTest], method [doFilterInternalTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:51.635+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 226, missCount = 4]
+2023-03-18T13:52:51.635+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 227, missCount = 4]
+2023-03-18T13:52:51.636+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 228, missCount = 4]
+2023-03-18T13:52:51.724+09:00 DEBUG 85348 --- [    Test worker] c.e.f.s.a.JwtAuthorizationFilter         : 인증이나 권한이 필요한 요청: null
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 229, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 230, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 231, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 232, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 233, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 234, missCount = 4]
+2023-03-18T13:52:51.725+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 235, missCount = 4]
+2023-03-18T13:52:51.726+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test method: class [AuthorizationFilterTest], method [doFilterInternalTest], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-03-18T13:52:51.726+09:00 DEBUG 85348 --- [    Test worker] o.s.t.c.w.ServletTestExecutionListener   : Resetting RequestContextHolder for test class com.example.flowerplatform.unitTest.AuthorizationFilterTest
+2023-03-18T13:52:51.726+09:00 DEBUG 85348 --- [    Test worker] org.springframework.test.context.cache   : Spring test ApplicationContext cache statistics: [DefaultContextCache@5623fd90 size = 4, maxSize = 32, parentContextCount = 0, hitCount = 236, missCount = 4]
+2023-03-18T13:52:51.726+09:00 DEBUG 85348 --- [    Test worker] tractDirtiesContextTestExecutionListener : After test class: class [AuthorizationFilterTest], class annotated with @DirtiesContext [false] with mode [null]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
