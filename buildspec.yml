@@ -10,8 +10,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo JASYPT_KEY
-      - gradle clean build -Pspring.profiles.active=dev -Pjasypt.encryptor.password=$(echo JASYPT_KEY)
+      - echo $JASYPT_KEY
+      - gradle clean build -Pspring.profiles.active=dev -Pjasypt.encryptor.password=$JASYPT_KEY
   post_build:
     commands:
       - echo Build completed on `date`
