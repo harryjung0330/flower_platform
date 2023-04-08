@@ -1,6 +1,7 @@
 package com.example.flowerplatform.security.utils;
 
 import com.example.flowerplatform.security.authorization.JwtAuthorizationFilter;
+import com.example.flowerplatform.security.securityConfig.SecurityConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.web.authentication.AuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -20,10 +21,10 @@ import java.util.stream.Collectors;
 public class IgnorePathFilterRules
 {
     List<String> authenticationIgnorePaths = List.of(
-            "/spring/health-check", "/token/re-issue", "/user/login", "/oauth2/authorization/**", "/login/oauth2/code/**");
+            SecurityConfig.REFRESH_TOKENS_PATH, SecurityConfig.ACTUATOR_PATH, SecurityConfig.LOGIN_PATH, SecurityConfig.OAUTH2_REDIRECT_PATH, SecurityConfig.OAUTH2_LOGIN_PATH);
 
     List<String> authorizationIgnorePaths = List.of(
-            "/spring/health-check", "/token/re-issue", "/user/login", "/oauth2/authorization/**", "/login/oauth2/code/**", "/actuator/**");
+            SecurityConfig.REFRESH_TOKENS_PATH, SecurityConfig.ACTUATOR_PATH, SecurityConfig.LOGIN_PATH, SecurityConfig.OAUTH2_REDIRECT_PATH, SecurityConfig.OAUTH2_LOGIN_PATH);
 
     Map< Class<? extends Filter>, List<AntPathRequestMatcher>> ignoreMap;
 

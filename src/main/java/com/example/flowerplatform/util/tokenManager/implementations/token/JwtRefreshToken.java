@@ -9,16 +9,18 @@ import java.util.Date;
 @ToString
 @EqualsAndHashCode
 @Getter
+@Setter
 public class JwtRefreshToken extends Token
 {
     private final String role;
 
-    private final Long sessionId;
+    @Builder.Default
+    private Long sessionId = null;
 
     private final Long userId;
 
     @Builder
-    public JwtRefreshToken(String subject, Date expiresAt, Date createdAt, String role, long sessionId, long userId)
+    public JwtRefreshToken(String subject, Date expiresAt, Date createdAt, String role, Long sessionId, Long userId)
     {
         super(subject, createdAt, expiresAt);
         this.role = role;

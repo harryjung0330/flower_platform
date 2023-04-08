@@ -33,24 +33,26 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+    public static final String LOGIN_PATH = "/users/login";
+    public static final String ACTUATOR_PATH = "/actuator/**";
 
-    private static final String[] ANONYMOUS_AUTH_ENTRY_POINT = {
-            "/spring/health-check", "/token/re-issue", "/user/login", "/user/register/**", "/user/id-inquiry/**", "/user/pw-inquiry/**", "/user/password/**"
-    };
+    public static final String OAUTH2_LOGIN_PATH = "/login/oauth2/code/**";
 
-    public static final String LOGIN_PATH = "/user/login";
+    public static final String OAUTH2_REDIRECT_PATH = "/oauth2/authorization/**";
+
+    public static final String REFRESH_TOKENS_PATH = "/users/tokens";
+
 
     private final AbstractAuthenticationProcessingFilter authenticationFilter;
 
-    JwtAuthorizationFilter authorizationFilter;
+    private final JwtAuthorizationFilter authorizationFilter;
 
-    JwtAuthorizationExceptionFilter authorizationExceptionFilter;
+    private final JwtAuthorizationExceptionFilter authorizationExceptionFilter;
 
     private final OnSuccessAuthenticationHandler onSuccessAuthenticationHandler;
 
     private final OnFailureAuthenticationHandler onFailureAuthenticationHandler;
 
-    private final IgnorePathFilterRules ignorePathFilterRules;
 
     //-------------------------------- for oauth2 login ---------------------------------
 
@@ -72,9 +74,9 @@ public class SecurityConfig {
         http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        //addAuthenticationFilter(http);
+        addAuthenticationFilter(http);
 
-        //addAuthorizationFilter(http);
+        addAuthorizationFilter(http);
 
         /*
         http.authorizeHttpRequests()

@@ -5,11 +5,13 @@ import com.example.flowerplatform.repository.UserRepository;
 import com.example.flowerplatform.repository.entity.AppUser.AppUser;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
 import com.example.flowerplatform.service.UserService;
-import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveInternalUserServiceDto;
 import com.example.flowerplatform.service.exceptions.DuplicateUserException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +23,8 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService
 {
     private final UserRepository userRepository;
+
+    private final PasswordEncoder passwordEncoder;
 
     public AppUser saveExternalUser(SaveExternalUserServiceDto saveExternalUserServiceDto)
     {
@@ -65,4 +69,41 @@ public class UserServiceImpl implements UserService
 
         return userRepository.findByRegistrationIdAndAuthenticationProvider(registrationId, authenticationProvider);
     }
+
+    @Transactional
+    @Override
+    public AppUser saveInternalUser(SaveInternalUserServiceDto saveInternalUserServiceDto)
+    {
+        try {
+            AppUser appUser = AppUser.builder()
+                    .role(saveInternalUserServiceDto.getRole())
+                    .email(saveInternalUserServiceDto.getEmail())
+                    .password(passwordEncoder.encode(saveInternalUserServiceDto.getRawPassword()))
+                    .authenticationProvider(AuthenticationProvider.INTERNAL)
+                    .build();
+
+            return userRepository.save(appUser);
+        }
+        catch(Exception ex)
+        {
+            log.debug("type of exception is " + ex.getClass());
+            if(ex instanceof DataIntegrityViolationException) {
+                DataIntegrityViolationException sqlException = (DataIntegrityViolationException) ex;
+
+                log.debug("DataIntegrityViolationException message: " + sqlException.getMessage());
+
+                throw new DuplicateUserException(sqlException.getMessage());
+
+            }
+            else{
+                log.error("unexpected error occurred!");
+                log.error(ex.toString());
+
+                throw ex;
+            }
+
+        }
+    }
+
+
 }

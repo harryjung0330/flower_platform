@@ -3,7 +3,7 @@ package com.example.flowerplatform.security.oauth2;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
 import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.service.UserService;
-import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveExternalUserServiceDto;
 import com.example.flowerplatform.service.exceptions.DuplicateUserException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

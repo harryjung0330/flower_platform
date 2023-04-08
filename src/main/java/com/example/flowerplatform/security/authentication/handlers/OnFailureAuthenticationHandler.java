@@ -22,6 +22,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Slf4j
 @Component
@@ -37,20 +38,20 @@ public class OnFailureAuthenticationHandler implements AuthenticationFailureHand
         log.debug("onAuthenticationFailure called!");
 
         if(exception instanceof PasswordNotMatchingException){
-            setErrorResponse(HttpStatus.BAD_REQUEST, response,  "비밀번호가 맞지 않습니다." ,exception.getMessage(), 400);
+            setErrorResponse(HttpStatus.BAD_REQUEST, response,  "비밀번호가 맞지 않습니다." ,exception.getMessage());
         } else if(exception instanceof UsernameNotFoundException){
-            setErrorResponse(HttpStatus.NOT_FOUND, response, "존재하지 않는 아이디 입니다.", exception.getMessage(), 400 );
+            setErrorResponse(HttpStatus.NOT_FOUND, response, "존재하지 않는 아이디 입니다.", exception.getMessage());
         } else if(exception instanceof AuthenticationException){
-            setErrorResponse(HttpStatus.BAD_REQUEST, response, "인증 에러", exception.getMessage(), 400);
+            setErrorResponse(HttpStatus.BAD_REQUEST, response, "인증 에러", exception.getMessage());
         } else if(exception instanceof AuthenticationServiceException){
-            setErrorResponse(HttpStatus.BAD_REQUEST, response, "부적절한 요청입니다.", exception.getMessage(), 400);
+            setErrorResponse(HttpStatus.BAD_REQUEST, response, "부적절한 요청입니다.", exception.getMessage());
         } else {
-            setErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, response, "서버에 문제가 있습니다.", exception.getMessage(), 400);
+            setErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, response, "서버에 문제가 있습니다.", exception.getMessage());
         }
 
     }
 
-    public void setErrorResponse(HttpStatus status, HttpServletResponse response, String errorMessage, String details, int errorCode) throws IOException {
+    public void setErrorResponse(HttpStatus status, HttpServletResponse response, String errorMessage, String details) throws IOException {
         response.setStatus(status.value());
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.setCharacterEncoding(StandardCharsets.UTF_8.toString());
@@ -59,7 +60,7 @@ public class OnFailureAuthenticationHandler implements AuthenticationFailureHand
                 .status(status.value())
                 .data(null)
                 .message(errorMessage + " => " + details)
-                .timestamp(LocalDateTime.now())
+                .timestamp(new Date())
                 .build();
 
         objectMapper.writeValue(response.getWriter(),tempErrorMsgDto );

@@ -6,24 +6,22 @@ import com.example.flowerplatform.repository.UserRepository;
 import com.example.flowerplatform.repository.entity.AppUser.AppUser;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
 import com.example.flowerplatform.security.authentication.userDetails.Role;
-import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveInternalUserServiceDto;
 import com.example.flowerplatform.service.implementation.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@SpringBootTest(classes = {UserServiceImpl.class})
 @Slf4j
 public class UserServiceImplTest {
 
@@ -32,6 +30,9 @@ public class UserServiceImplTest {
 
     @MockBean
     private UserRepository userRepository;
+
+    @MockBean
+    private PasswordEncoder passwordEncoder;
 
 
     @Test
@@ -85,6 +86,34 @@ public class UserServiceImplTest {
         assertThrows(OAuth2SaveExternalUserException.class, ()->{
             userService.saveExternalUser(dataToTest);
         });
+    }
+
+    @Test
+    public void saveInternalUserTest(){
+        String email = "harry12312@gmail.com";
+        String password = "asdfsfdfds";
+        Role role = Role.USER;
+
+        SaveInternalUserServiceDto saveInternalUserServiceDto = SaveInternalUserServiceDto.builder()
+                .email(email)
+                .rawPassword(password)
+                .role(role)
+                .build();
+
+        AppUser appUser = AppUser.builder()
+                .email(email)
+                .role(Role.USER)
+                .authenticationProvider(AuthenticationProvider.INTERNAL)
+                .password(password)
+                .build();
+
+        when(userRepository.save(appUser)).thenReturn(appUser);
+        when(passwordEncoder.encode(appUser.getPassword())).thenReturn(appUser.getPassword());
+
+        AppUser postSave = userService.saveInternalUser(saveInternalUserServiceDto);
+
+        assertEquals(postSave, appUser);
+
     }
 
 }

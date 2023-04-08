@@ -10,12 +10,12 @@ import com.example.flowerplatform.util.tokenManager.implementations.token.JwtRef
 import com.example.flowerplatform.util.tokenManager.implementations.tokenWorkers.JwtRefreshTokenWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+
 
 import java.util.Calendar;
 import java.util.Date;
@@ -52,13 +52,17 @@ public class JwtRefreshTokenWorkerTest
 
         log.debug("expiring time: " + expiresAt.toString());
 
-        Token jwtToken = JwtRefreshToken.builder()
+        JwtRefreshToken jwtToken = JwtRefreshToken.builder()
+                .subject(String.valueOf(userId))
                 .role(role)
-
                 .createdAt(createdAt)
                 .expiresAt(expiresAt)
                 .userId(userId)
                 .build();
+
+        log.debug("============================== session id before save: " + String.valueOf(jwtToken.getSessionId()));
+
+
 
         Session postSave = Session.builder()
                         .userId(userId)
@@ -76,6 +80,80 @@ public class JwtRefreshTokenWorkerTest
         //then
         assertNotNull(res);
         verify(sessionRepository, atLeast(2)).save(any(Session.class));
+    }
+
+    @Test
+    public void testCreateJwtRefreshTokenWorkerWithoutDate(){
+
+        //given
+        String role = "USER";
+        long userId = 1L;
+
+
+        JwtRefreshToken jwtToken = JwtRefreshToken.builder()
+                .subject(String.valueOf(userId))
+                .role(role)
+                .userId(userId)
+                .build();
+
+        log.debug("============================== session id before save: " + String.valueOf(jwtToken.getSessionId()));
+
+
+
+        Session postSave = Session.builder()
+                .userId(userId)
+                .sessionId(1L)
+                .build();
+
+
+        Mockito.when(sessionRepository.save(any(Session.class))).thenReturn(postSave);
+
+
+        //when
+        String res = jwtRefreshTokenWorker.createToken(jwtToken);
+        log.info("created token is following: \n" + res);
+
+        //then
+        assertNotNull(res);
+        verify(sessionRepository, atLeast(2)).save(any(Session.class));
+    }
+
+    @Test
+    public void createJwtTokenWithSessionId(){
+
+        //given
+        String role = "USER";
+        long userId = 1L;
+        long sessionId = 1L;
+
+
+        JwtRefreshToken jwtToken = JwtRefreshToken.builder()
+                .subject(String.valueOf(userId))
+                .role(role)
+                .userId(userId)
+                .sessionId(sessionId)
+                .build();
+
+        log.debug("============================== session id before save: " + String.valueOf(jwtToken.getSessionId()));
+
+
+
+        Session postSave = Session.builder()
+                .userId(userId)
+                .sessionId(1L)
+                .build();
+
+
+        Mockito.when(sessionRepository.save(any(Session.class))).thenReturn(postSave);
+
+
+        //when
+        String res = jwtRefreshTokenWorker.createToken(jwtToken);
+        log.info("created token is following: \n" + res);
+
+        //then
+        assertNotNull(res);
+        verify(sessionRepository, atLeast(1)).save(any(Session.class));
     }
 
     @Test
@@ -102,6 +180,7 @@ public class JwtRefreshTokenWorkerTest
                 .userId(userId)
                 .sessionId(1L)
                 .build();
+
         Mockito.when(sessionRepository.save(any(Session.class))).thenReturn(postSave);
 
         String res = jwtRefreshTokenWorker.createToken(jwtToken);
@@ -136,6 +215,7 @@ public class JwtRefreshTokenWorkerTest
         Date expiresAt = calendar.getTime();
 
         JwtAccessToken jwtToken = JwtAccessToken.builder()
+                .subject(String.valueOf(userId))
                 .role(role)
                 .createdAt(createdAt)
                 .expiresAt(expiresAt)
@@ -186,6 +266,8 @@ public class JwtRefreshTokenWorkerTest
                 .role(role)
                 .createdAt(createdAt)
                 .expiresAt(expiresAt)
+                .userId(userId)
+                .subject(String.valueOf(userId))
                 .build();
 
         Session postSave = Session.builder()
@@ -226,6 +308,7 @@ public class JwtRefreshTokenWorkerTest
         Date expiresAt = calendar.getTime();
 
         JwtRefreshToken jwtToken = JwtRefreshToken.builder()
+                .subject(String.valueOf(userId))
                 .role(role)
                 .userId(userId)
                 .createdAt(createdAt)

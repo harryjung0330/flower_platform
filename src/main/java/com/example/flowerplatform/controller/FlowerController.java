@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -39,7 +40,7 @@ public class FlowerController
                 .message("flower recommendation succeeded")
                 .data(flowers)
                 .status(HttpStatus.OK.value())
-                .timestamp(LocalDateTime.now())
+                .timestamp(new Date())
                 .build();
 
         return ResponseEntity.ok(messageToReturn);

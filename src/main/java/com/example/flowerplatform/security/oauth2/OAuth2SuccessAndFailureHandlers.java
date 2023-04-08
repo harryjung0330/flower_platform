@@ -70,7 +70,7 @@ public class OAuth2SuccessAndFailureHandlers {
                 .<TokenDto>builder()
                 .message("successfully authenticated through OAuth2")
                 .data(tokenDto)
-                .timestamp(LocalDateTime.now())
+                .timestamp(new Date())
                 .status(HttpStatus.OK.value())
                 .build();
 
@@ -101,7 +101,7 @@ public class OAuth2SuccessAndFailureHandlers {
         MessageFormat tokenMessage = MessageFormat
                 .builder()
                 .message("failed to authenticate user: " + authenticationException.getMessage())
-                .timestamp(LocalDateTime.now())
+                .timestamp(new Date())
                 .status(HttpStatus.UNAUTHORIZED.value())
                 .build();
 

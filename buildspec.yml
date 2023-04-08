@@ -15,6 +15,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - aws s3api get-object --bucket cloudformation-code-repo-flower-platform --key config/web_server/application.properties application.properties
+      - touch jasyptKey.txt
+      - echo $JASYPT_KEY > jasyptKey.txt
 artifacts:
   files:
     - build/libs/flower-platform.jar
@@ -22,4 +25,6 @@ artifacts:
     - start_server.sh
     - stop_server.sh
     - validate_service.sh
+    - application.properties
+    - jasyptKey.txt
   discard-paths: yes

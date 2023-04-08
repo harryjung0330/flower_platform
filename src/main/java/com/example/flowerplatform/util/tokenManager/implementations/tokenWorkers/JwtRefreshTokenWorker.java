@@ -3,14 +3,17 @@ package com.example.flowerplatform.util.tokenManager.implementations.tokenWorker
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.flowerplatform.repository.SessionRepository;
 import com.example.flowerplatform.repository.entity.Session;
 import com.example.flowerplatform.security.authentication.exceptions.UnsupportedTokenTypeException;
+import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.util.tokenManager.Token;
 import com.example.flowerplatform.util.tokenManager.TokenWorker;
 import com.example.flowerplatform.util.tokenManager.exception.JwtCreationException;
 import com.example.flowerplatform.util.tokenManager.exception.JwtMalformedException;
+import com.example.flowerplatform.util.tokenManager.implementations.properties.TokenProperties;
 import com.example.flowerplatform.util.tokenManager.implementations.token.JwtRefreshToken;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +21,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Calendar;
 import java.util.Date;
 
 @Component
@@ -38,51 +42,82 @@ public class JwtRefreshTokenWorker implements TokenWorker
     @Value("${jwt.token.secretKey.secondary}")
     private String SECRET_KEY_SECONDARY;
 
-    public void setPrimarySecretKey(String secretKey){
-        SECRET_KEY = secretKey;
-    }
-
-    public void setSecondarySecretKey(String secretKey){
-        SECRET_KEY_SECONDARY = secretKey;
-    }
 
     @Override
     @Transactional
-    public String createToken(Token token) {
+    public String createToken(Token token) throws JwtCreationException{
         if(!supports(token.getClass()))
             throw new UnsupportedTokenTypeException("JwtRefreshTokenWorker does not support " + token.getClass());
 
 
         JwtRefreshToken jwtRefreshToken = (JwtRefreshToken) token;
 
-        if(jwtRefreshToken.getUserId() == null)
-            throw new JwtCreationException("cannot create token because userId is null!");
+        if(jwtRefreshToken.getUserId() == null || jwtRefreshToken.getSubject() == null)
+            throw new JwtCreationException("cannot create token because userId is null or subject is null!");
 
-        Session session = Session.builder()
-                .userId(jwtRefreshToken.getUserId())
-                .build();
+        if(jwtRefreshToken.getCreatedAt() == null || jwtRefreshToken.getExpiresAt() == null) {
+            log.debug("=========================================== created date or expiresAt is null!");
 
-        Session postCreation = sessionRepository.save(session);
+            jwtRefreshToken.setCreatedAt(new Date());
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(jwtRefreshToken.getCreatedAt());
+            calendar.add(Calendar.MINUTE, TokenProperties.REFRESH_TOKEN_DURATION_MIN);
 
-        String refreshToken = createAuthenticationToken(jwtRefreshToken.getSubject(), jwtRefreshToken.getCreatedAt(), jwtRefreshToken.getExpiresAt(), jwtRefreshToken.getRole()
-                , postCreation.getSessionId(), jwtRefreshToken.getUserId());
+            jwtRefreshToken.setExpiresAt(calendar.getTime());
+        }
 
+        if(jwtRefreshToken.getSessionId() != null) {
+            //token session id가 있을경우 -> 토큰을 refresh하는 경우!
+
+            log.debug("================================== session id is not null!");
+            log.debug("================================== session id is " + jwtRefreshToken.getSessionId());
+
+            String refreshToken = createAuthenticationToken(jwtRefreshToken.getSubject(), jwtRefreshToken.getCreatedAt(), jwtRefreshToken.getExpiresAt(), jwtRefreshToken.getRole()
+                    , jwtRefreshToken.getSessionId(), jwtRefreshToken.getUserId());
+
+            updateSession(jwtRefreshToken.getSessionId(),jwtRefreshToken.getUserId(), jwtRefreshToken.getExpiresAt(), refreshToken );
+
+            return refreshToken;
+        }
+
+        else {
+            //token session id가 없을경우 -> session을 아예 새로 시작하는 경우!
+
+            log.debug("================================== session id is null!");
+
+            Session session = Session.builder()
+                    .userId(jwtRefreshToken.getUserId())
+                    .build();
+
+            Session postCreation = sessionRepository.save(session);
+
+            String refreshToken = createAuthenticationToken(jwtRefreshToken.getSubject(), jwtRefreshToken.getCreatedAt(), jwtRefreshToken.getExpiresAt(), jwtRefreshToken.getRole()
+                    , postCreation.getSessionId(), jwtRefreshToken.getUserId());
+
+
+            Session r = updateSession(postCreation.getSessionId(), postCreation.getUserId(), jwtRefreshToken.getExpiresAt(), refreshToken);
+
+            log.debug("saved session in db: " + r.toString());
+
+            return refreshToken;
+        }
+    }
+
+    private Session updateSession(Long sessionId, Long userId, Date expiresAt, String refreshToken){
         Session sessionToUpdate = Session.builder()
-                .sessionId(postCreation.getSessionId())
-                .userId(postCreation.getUserId())
-                .expiresAt(jwtRefreshToken.getExpiresAt())
+                .sessionId(sessionId)
+                .userId(userId)
+                .expiresAt(expiresAt)
                 .refreshToken(refreshToken)
                 .build();
 
-        Session r = sessionRepository.save(sessionToUpdate);
+        return sessionRepository.save(sessionToUpdate);
 
-        log.debug("saved session in db: " + r.toString());
-
-        return refreshToken;
     }
 
+
     @Override
-    public <T extends Token> T verifyToken(String token, Class<T> tokenClass) {
+    public <T extends Token> T verifyToken(String token, Class<T> tokenClass) throws UnsupportedTokenTypeException, JwtMalformedException, JWTVerificationException{
         if(!supports(tokenClass))
             throw new UnsupportedTokenTypeException("JwtRefreshTokenWorker does not support " + token.getClass());
 
@@ -160,9 +195,10 @@ public class JwtRefreshTokenWorker implements TokenWorker
         try {
             result = JWT.require(Algorithm.HMAC512(SECRET_KEY)).build().verify(jwtToken);
         }
-        catch (JWTVerificationException jwtVerificationException)
+        catch (SignatureVerificationException sgException)
         {
             log.debug("jwt verification with primary key failed! it will try the secondary key!");
+            log.debug("error message: " + sgException.getMessage());
             result = JWT.require(Algorithm.HMAC512(SECRET_KEY_SECONDARY)).build().verify(jwtToken);
         }
 

@@ -1,6 +1,7 @@
 package com.example.flowerplatform.security.authorization;
 
 import com.example.flowerplatform.repository.UserRepository;
+import com.example.flowerplatform.security.authorization.exceptions.TokenMissingException;
 import com.example.flowerplatform.util.tokenManager.TokenManager;
 import com.example.flowerplatform.util.tokenManager.implementations.properties.TokenProperties;
 import com.example.flowerplatform.security.utils.IgnorePathFilterRules;
@@ -24,7 +25,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Slf4j
-//@Component
+@Component
 public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
 
     private final TokenManager tokenManager;
@@ -49,7 +50,14 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         log.debug("인증이나 권한이 필요한 요청: " + request.getRequestURI() );
 
-        JwtAccessToken accessToken = tokenManager.verifyToken(request.getHeader(TokenProperties.HEADER_ACCESS_KEY), JwtAccessToken.class);
+        String accessTokenStr = request.getHeader(TokenProperties.HEADER_ACCESS_KEY);
+
+        if( accessTokenStr == null || accessTokenStr.equals("") )
+        {
+            throw new TokenMissingException("token is missing");
+        }
+
+        JwtAccessToken accessToken = tokenManager.verifyToken(accessTokenStr, JwtAccessToken.class);
 
 
         //Jwt 토큰 서명을 통해서 서명이 정상이면 Authentication 객체를 만들어 준다.

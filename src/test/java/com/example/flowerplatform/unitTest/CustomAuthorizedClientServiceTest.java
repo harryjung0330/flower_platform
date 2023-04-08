@@ -6,13 +6,10 @@ import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvid
 import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.security.oauth2.CustomAuthorizedClientService;
 import com.example.flowerplatform.service.UserService;
-import com.example.flowerplatform.service.dto.SaveExternalUserServiceDto;
+import com.example.flowerplatform.service.dto.input.SaveExternalUserServiceDto;
 import com.example.flowerplatform.service.exceptions.DuplicateUserException;
-import com.example.flowerplatform.service.implementation.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.core.Authentication;

@@ -1,4 +1,4 @@
-package com.example.flowerplatform.service.dto;
+package com.example.flowerplatform.service.dto.input;
 
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
 import com.example.flowerplatform.security.authentication.userDetails.Role;

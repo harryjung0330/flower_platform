@@ -8,12 +8,14 @@ import com.example.flowerplatform.security.authentication.exceptions.Unsupported
 import com.example.flowerplatform.util.tokenManager.Token;
 import com.example.flowerplatform.util.tokenManager.TokenWorker;
 import com.example.flowerplatform.util.tokenManager.exception.JwtMalformedException;
+import com.example.flowerplatform.util.tokenManager.implementations.properties.TokenProperties;
 import com.example.flowerplatform.util.tokenManager.implementations.token.JwtAccessToken;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.Calendar;
 import java.util.Date;
 
 @Component
@@ -45,6 +47,17 @@ public class JwtAccessTokenWorker implements TokenWorker
         if(!supports(token.getClass()))
             throw new UnsupportedTokenTypeException("JwtAccessTokenWorker does not support " + token.getClass());
         JwtAccessToken jwtAccessToken = (JwtAccessToken) token;
+
+        if(jwtAccessToken.getCreatedAt() == null || jwtAccessToken.getExpiresAt() == null) {
+
+            jwtAccessToken.setCreatedAt(new Date());
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(jwtAccessToken.getCreatedAt());
+            calendar.add(Calendar.MINUTE, TokenProperties.ACCESS_TOKEN_DURATION_MIN);
+
+            jwtAccessToken.setExpiresAt(calendar.getTime());
+        }
+
         return createAuthenticationToken(jwtAccessToken.getSubject(), jwtAccessToken.getCreatedAt(), jwtAccessToken.getExpiresAt(),
                 jwtAccessToken.getRole(), jwtAccessToken.getUserId());
     }

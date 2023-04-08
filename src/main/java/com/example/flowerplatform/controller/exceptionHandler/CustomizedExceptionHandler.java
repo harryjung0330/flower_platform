@@ -1,6 +1,10 @@
 package com.example.flowerplatform.controller.exceptionHandler;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.example.flowerplatform.dto.MessageFormat;
+import com.example.flowerplatform.service.exceptions.UnusableSessionException;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -26,19 +30,17 @@ import java.util.Date;
 public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
 {
 
+    private static final String REFRESH_TOKEN_PATH = "/users/tokens";
     @Override
     protected ResponseEntity<Object> handleMissingPathVariable(MissingPathVariableException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
         log.debug("handleMissingPathVariable is called");
 
         String message = ex.getMessage();
 
-        MessageFormat exceptionResult =
-                MessageFormat.builder()
-                        .status(HttpStatus.BAD_REQUEST.value())
-                        .message(message)
-                        .data(null)
-                        .timestamp(LocalDateTime.now())
-                        .build();
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                HttpStatus.BAD_REQUEST.value(),
+                null);
 
         return new ResponseEntity(exceptionResult, HttpStatus.BAD_REQUEST);
     }
@@ -49,13 +51,10 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
 
         String message = ex.getMessage();
 
-        MessageFormat exceptionResult =
-                MessageFormat.builder()
-                        .status(HttpStatus.BAD_REQUEST.value())
-                        .message(message)
-                        .data(null)
-                        .timestamp(LocalDateTime.now())
-                        .build();
+        MessageFormat exceptionResult = getMessageFormat(
+                        message,
+                        HttpStatus.BAD_REQUEST.value(),
+                        null);
 
         return new ResponseEntity(exceptionResult, HttpStatus.BAD_REQUEST);
     }
@@ -66,13 +65,11 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
 
         String message = ex.getMessage();
 
-        MessageFormat exceptionResult =
-                MessageFormat.builder()
-                        .status(HttpStatus.BAD_REQUEST.value())
-                        .message(message)
-                        .data(null)
-                        .timestamp(LocalDateTime.now())
-                        .build();
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                HttpStatus.BAD_REQUEST.value(),
+                null);
+
 
         return new ResponseEntity(exceptionResult, HttpStatus.BAD_REQUEST);
     }
@@ -88,13 +85,11 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
         String message = ex.getBindingResult().getFieldError().getDefaultMessage() == null? ""
                 :ex.getBindingResult().getFieldError().getDefaultMessage();
 
-        MessageFormat exceptionResult =
-                MessageFormat.builder()
-                        .status(HttpStatus.BAD_REQUEST.value())
-                        .message(message)
-                        .data(null)
-                        .timestamp(LocalDateTime.now())
-                        .build();
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                HttpStatus.BAD_REQUEST.value(),
+                null);
+
 
         return new ResponseEntity(exceptionResult, HttpStatus.BAD_REQUEST);
     }
@@ -102,14 +97,98 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
 
     @ExceptionHandler(Exception.class)
     public final ResponseEntity<Object> handleInternalServerExceptions(Exception ex, WebRequest request){
-        MessageFormat exceptionResult = MessageFormat.builder()
-                .message("internal server error => " + ex.getMessage())
-                .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                .data(null)
-                .timestamp(LocalDateTime.now())
-                .build();
+        MessageFormat exceptionResult = getMessageFormat(
+                "internal server error => " + ex.getMessage(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                null);
 
         return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(TokenExpiredException.class)
+    public final ResponseEntity<Object> handleTokenExpiredException(Exception ex, WebRequest request){
+
+        String path = request.getContextPath();
+        String message;
+        int status;
+
+        if(path.equals(REFRESH_TOKEN_PATH))
+        {
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "refresh token is expired with detailed message => " + ex.getMessage();
+        }
+        else{
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "token is expired! with detailed message => " + ex.getMessage();
+        }
+
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                status,
+                null);
+
+        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(JWTVerificationException.class)
+    public final ResponseEntity<Object> handleJWTVerificationException(Exception ex, WebRequest request){
+
+        String path = request.getContextPath();
+        String message;
+        int status;
+
+        if(path.equals(REFRESH_TOKEN_PATH))
+        {
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "Jwt verification with message => " + ex.getMessage();
+        }
+        else{
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "token is expired! with detailed message => " + ex.getMessage();
+        }
+
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                status,
+                null);
+
+        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler( UnusableSessionException.class)
+    public final ResponseEntity<Object> handleUnusableSessionException(Exception ex, WebRequest request){
+
+        String path = request.getContextPath();
+        String message;
+        int status;
+
+        if(path.equals(REFRESH_TOKEN_PATH))
+        {
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "cannot use rotated refresh token =>" + ex.getMessage();
+        }
+        else{
+            status = HttpStatus.UNAUTHORIZED.value();
+            message = "unable to use the session =>" + ex.getMessage();
+        }
+
+        MessageFormat exceptionResult = getMessageFormat(
+                message,
+                status,
+                null);
+
+        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    private <T> MessageFormat<T>  getMessageFormat(String message, int status, T data){
+        MessageFormat exceptionResult = MessageFormat.builder()
+                .message(message)
+                .status(status)
+                .data(data)
+                .timestamp(new Date())
+                .build();
+
+        return exceptionResult;
     }
 
 

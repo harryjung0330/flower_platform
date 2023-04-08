@@ -60,7 +60,7 @@ public class OnSuccessAuthenticationHandler implements AuthenticationSuccessHand
         MessageFormat loginSuccessMessage =
                 MessageFormat.builder()
                                 .message("login success!")
-                                .timestamp(LocalDateTime.now())
+                                .timestamp(new Date())
                                 .data(tokenDto)
                                 .build();
 
