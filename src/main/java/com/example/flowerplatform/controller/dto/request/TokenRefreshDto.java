@@ -18,7 +18,7 @@ public class TokenRefreshDto {
     @NotBlank(message = "refresh token is required to renew your tokens")
     private final String refreshToken;
 
-    @NotBlank(message = "user id is reuqired to renew your tokens")
+    @NotBlank(message = "user id is required to renew your tokens")
     private final Long userId;
 }
 

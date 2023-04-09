@@ -127,7 +127,7 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
                 status,
                 null);
 
-        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(exceptionResult, HttpStatusCode.valueOf(status));
     }
 
     @ExceptionHandler(JWTVerificationException.class)
@@ -152,7 +152,7 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
                 status,
                 null);
 
-        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(exceptionResult, HttpStatusCode.valueOf(status));
     }
 
     @ExceptionHandler( UnusableSessionException.class)
@@ -177,7 +177,7 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler
                 status,
                 null);
 
-        return new ResponseEntity(exceptionResult, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity(exceptionResult, HttpStatusCode.valueOf(status));
     }
 
     private <T> MessageFormat<T>  getMessageFormat(String message, int status, T data){
