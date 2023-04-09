@@ -27,4 +27,6 @@ artifacts:
     - validate_service.sh
     - application.properties
     - jasyptKey.txt
+    - allow_traffic.sh
+    - after_install.sh
   discard-paths: yes

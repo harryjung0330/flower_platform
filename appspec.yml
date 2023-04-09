@@ -1,7 +1,17 @@
 version: 0.0
 os: linux
+files:
+  - source: flower-platform.jar
+    destination: /home/ec2-user
+  - source: jasyptKey.txt
+    destination: /home/ec2-user
+
 file_exists_behavior: OVERWRITE
 hooks:
+  AfterInstall:
+    - location: after_install.sh
+      timeout: 30
+      runas: root
   ApplicationStart:
     - location: start_server.sh
       timeout: 80
@@ -9,6 +19,14 @@ hooks:
   ApplicationStop:
     - location: stop_server.sh
       timeout: 30
+      runas: root
+  AllowTraffic:
+    - location: allow_traffic.sh
+      timeout: 360
+      runas: root
+  ValidateService:
+    - location: validate_service.sh
+      timeout: 120
       runas: root
 
 
