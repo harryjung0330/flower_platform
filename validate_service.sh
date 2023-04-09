@@ -2,8 +2,7 @@
 
 while [ true ]
 do
-    if [ "$(curl -s http://localhost:80/health)" = '{"status":"UP"}' ]
-    then
+    if [[ "$(curl -s http://localhost:80/actuator/health)" =~ '"status":"UP"' ]]; then
         exit 0
     else
         echo "check server is running?"

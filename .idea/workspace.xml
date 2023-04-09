@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/appspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/start_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stop_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/stop_server.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validate_service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/validate_service.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +86,28 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.GetFlowersTest">
+  <component name="RunManager" selected="Gradle.JwtAccessTokenWorkerTest">
+    <configuration name="FlowerPlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.flowerplatform.FlowerPlatformApplication" />
+      <module name="flower-platform.main" />
+      <option name="VM_PARAMETERS" value="-Djasypt.encryptor.password=asssvdabamkklkslkdmfsllaannkjnujasdf -Dspring.profiles.active=test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.flowerplatform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <option name="VM_PARAMETERS" value="-Djasypt.encryptor.password=asssvdabamkklkslkdmfsllaannkjnujasdf -Dspring.profiles.active=test" />
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
         <option name="region" />
@@ -117,7 +140,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="JwtRefreshTokenWorkerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JwtAccessTokenWorkerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -130,7 +153,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.JwtRefreshTokenWorkerTest&quot;" />
+            <option value="&quot;com.example.flowerplatform.unitTest.JwtAccessTokenWorkerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtAccessTokenWorkerTest.testTwoSecretKeys" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.flowerplatform.unitTest.JwtAccessTokenWorkerTest.testTwoSecretKeys&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -154,52 +200,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.example.flowerplatform.integrationTest.RefreshTokenTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RefreshTokenTest.refreshTokens" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.integrationTest.RefreshTokenTest.refreshTokens&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SessionRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.flowerplatform.unitTest.SessionRepositoryTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,19 +245,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Gradle.JwtAccessTokenWorkerTest" />
+      <item itemvalue="Gradle.JwtAccessTokenWorkerTest.testTwoSecretKeys" />
       <item itemvalue="Gradle.GetFlowersTest" />
-      <item itemvalue="Gradle.JwtRefreshTokenWorkerTest" />
-      <item itemvalue="Gradle.SessionRepositoryTest" />
       <item itemvalue="Gradle.RefreshTokenTest" />
-      <item itemvalue="Gradle.RefreshTokenTest.refreshTokens" />
+      <item itemvalue="애플리케이션.FlowerPlatformApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JwtAccessTokenWorkerTest" />
+        <item itemvalue="Gradle.JwtAccessTokenWorkerTest.testTwoSecretKeys" />
+        <item itemvalue="애플리케이션.FlowerPlatformApplication" />
         <item itemvalue="Gradle.GetFlowersTest" />
         <item itemvalue="Gradle.RefreshTokenTest" />
-        <item itemvalue="Gradle.SessionRepositoryTest" />
-        <item itemvalue="Gradle.JwtRefreshTokenWorkerTest" />
-        <item itemvalue="Gradle.RefreshTokenTest.refreshTokens" />
       </list>
     </recent_temporary>
   </component>

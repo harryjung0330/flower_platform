@@ -31,6 +31,11 @@ public class JwtAccessTokenWorkerTest
         Calendar calendar = Calendar.getInstance();
         Date createdAt = new Date();
 
+        String tempKey = "helloWorld!";
+
+        jwtAccessTokenWorker.setSecondarySecretKey(tempKey);
+        jwtAccessTokenWorker.setPrimarySecretKey(tempKey);
+
         calendar.setTime(createdAt);
         calendar.add(Calendar.MINUTE, 5);
 
@@ -42,12 +47,15 @@ public class JwtAccessTokenWorkerTest
                 .expiresAt(expiresAt)
                 .userId(userId)
                 .build();
+
+
         String res = jwtAccessTokenWorker.createToken(jwtToken);
 
         assertNotNull(res);
 
         //intentionally change primary key to test whether it uses secondary key
         jwtAccessTokenWorker.setPrimarySecretKey("none!");
+
 
         JwtAccessToken t = jwtAccessTokenWorker.verifyToken(res, JwtAccessToken.class);
 
