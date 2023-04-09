@@ -15,12 +15,14 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3api get-object --bucket cloudformation-code-repo-flower-platform --key config/web_server/application.properties application.properties
       - touch jasyptKey.txt
+      - touch dbEndpoint.txt
       - echo -n $JASYPT_KEY > jasyptKey.txt
+      - echo -n "jdbc:mysql://$(aws cloudformation describe-stacks --stack-name test-env-final --query "Stacks[0].Outputs[?OutputKey=='RdsDbEndpoint'].OutputValue" --output text):3306/flower_platform" > dbEndpoint.txt
 artifacts:
   files:
     - build/libs/flower-platform.jar
+    - dbEndpoint.txt
     - appspec.yml
     - start_server.sh
     - stop_server.sh

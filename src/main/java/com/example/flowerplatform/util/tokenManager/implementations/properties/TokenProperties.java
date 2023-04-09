@@ -6,9 +6,6 @@ public interface TokenProperties {
     String HEADER_REFRESH_KEY = "REFRESH_TOKEN";
 
 
-    Long ACCESS_TOKEN_EXPIRED_TIME = 60000L * 5;
-    Long REFRESH_TOKEN_EXPIRED_TIME = 60000L * 60 * 24 * 31;
-
     int ACCESS_TOKEN_DURATION_MIN = 5;
     int REFRESH_TOKEN_DURATION_MIN = 60 * 24 * 30;
 
