@@ -25,7 +25,6 @@ artifacts:
     - start_server.sh
     - stop_server.sh
     - validate_service.sh
-    - application.properties
     - jasyptKey.txt
     - allow_traffic.sh
     - after_install.sh

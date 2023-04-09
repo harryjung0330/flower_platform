@@ -37,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-@EnabledIfEnvironmentVariable(named = "spring.profiles.active", matches = "test")
+@EnabledIfEnvironmentVariable(named = "spring.profiles.active", matches = "localtest")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class GetFlowersTest
 {
