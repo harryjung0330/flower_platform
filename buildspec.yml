@@ -17,7 +17,7 @@ phases:
       - echo Build completed on `date`
       - aws s3api get-object --bucket cloudformation-code-repo-flower-platform --key config/web_server/application.properties application.properties
       - touch jasyptKey.txt
-      - echo $JASYPT_KEY > jasyptKey.txt
+      - echo -n $JASYPT_KEY > jasyptKey.txt
 artifacts:
   files:
     - build/libs/flower-platform.jar
