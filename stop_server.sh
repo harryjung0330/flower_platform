@@ -1,3 +1,7 @@
 #!/bin/bash
 
-sudo curl -X POST http://localhost:80/actuator/shutdown || echo "failed to exit program"
+if [[ "$(ss -tulpn | grep LISTEN | grep :80)" == '' ]]; then
+        echo "no process running on port 80"
+    else
+        sudo curl -X POST http://localhost:80/actuator/shutdown
+fi

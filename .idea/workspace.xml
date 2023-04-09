@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/appspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/flowerplatform/unitTest/JwtAccessTokenWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/service/implementation/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stop_server.sh" beforeDir="false" afterPath="$PROJECT_DIR$/stop_server.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/validate_service.sh" beforeDir="false" afterPath="$PROJECT_DIR$/validate_service.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.JwtAccessTokenWorkerTest">
+  <component name="RunManager" selected="애플리케이션.FlowerPlatformApplication">
     <configuration name="FlowerPlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.flowerplatform.FlowerPlatformApplication" />
       <module name="flower-platform.main" />

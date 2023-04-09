@@ -4,10 +4,12 @@ import com.example.flowerplatform.exceptions.OAuth2SaveExternalUserException;
 import com.example.flowerplatform.repository.UserRepository;
 import com.example.flowerplatform.repository.entity.AppUser.AppUser;
 import com.example.flowerplatform.repository.entity.AppUser.AuthenticationProvider;
+import com.example.flowerplatform.security.authentication.userDetails.Role;
 import com.example.flowerplatform.service.UserService;
 import com.example.flowerplatform.service.dto.input.SaveExternalUserServiceDto;
 import com.example.flowerplatform.service.dto.input.SaveInternalUserServiceDto;
 import com.example.flowerplatform.service.exceptions.DuplicateUserException;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -102,6 +104,30 @@ public class UserServiceImpl implements UserService
                 throw ex;
             }
 
+        }
+    }
+
+    @PostConstruct
+    public void createExampleUser(){
+        SaveInternalUserServiceDto s1 = SaveInternalUserServiceDto.builder()
+                .email("example1@gmail.com")
+                .rawPassword("helloWorld!")
+                .role(Role.USER)
+                .build();
+
+        SaveInternalUserServiceDto s2 = SaveInternalUserServiceDto.builder()
+                .email("example2@gmail.com")
+                .rawPassword("helloWorld!")
+                .role(Role.USER)
+                .build();
+
+        try {
+            saveInternalUser(s1);
+            saveInternalUser(s2);
+        }
+        catch (Exception e) {
+            log.error("failed to save user after initializing UserServiceImpl");
+            log.error(e.getMessage());
         }
     }
 
