@@ -61,6 +61,7 @@ public class OnSuccessAuthenticationHandler implements AuthenticationSuccessHand
                 MessageFormat.builder()
                                 .message("login success!")
                                 .timestamp(new Date())
+                                .status(HttpStatus.OK.value())
                                 .data(tokenDto)
                                 .build();
 

@@ -5,113 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="223e7e8f-5c4a-4f61-8b8e-8d587fd4deaa" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/FlowerPlatformApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/config/JasyptConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/FlowerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/dto/request/TokenRefreshDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/dto/response/FlowerDto$FlowerDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/dto/response/FlowerDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/controller/exceptionHandler/CustomizedExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/dto/MessageFormat$MessageFormatBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/dto/MessageFormat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/exceptions/OAuth2SaveExternalUserException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/FlowerPictureRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/FlowerRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/SessionRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/AppUser/AppUser$AppUserBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/AppUser/AppUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/AppUser/AuthenticationProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/Flower$FlowerBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/Flower.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/Session$SessionBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/Session.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/flowerPictures/FlowerPicture$FlowerPictureBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/flowerPictures/FlowerPicture.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/repository/entity/flowerPictures/FlowerPicturePrimaryKey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/authenticationManager/CustomAuthenticationManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/authenticationProvider/EmailAuthenticationProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/dto/LoginRequestDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/dto/TokenDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/exceptions/AuthenticationMissingInfoException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/exceptions/PasswordNotMatchingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/exceptions/UnsupportedAuthenticationTypeException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/exceptions/UnsupportedRequestException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/exceptions/UnsupportedTokenTypeException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/filter/AuthenticationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnFailureAuthenticationHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/matchers/RequestMatcherConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/passwordEncoder/PasswordEncoderConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/userDetailService/EmailUserDetailService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/userDetails/AppUserDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authentication/userDetails/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authorization/JwtAuthorizationExceptionFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authorization/JwtAuthorizationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/authorization/exceptions/TokenMissingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomAuthorizedClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/CustomStatelessAuthorizationRequestRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/OAuth2SuccessAndFailureHandlers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto$TokenDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/dto/TokenDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/util/CookieUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/util/ObjectSerializationUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/oauth2/util/StringEncAndDecryptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/securityConfig/SecurityConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/security/utils/IgnorePathFilterRules.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/FlowerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/SessionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/input/SaveExternalUserServiceDto$SaveExternalUserServiceDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/input/SaveExternalUserServiceDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/input/SaveInternalUserServiceDto$SaveInternalUserServiceDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/input/SaveInternalUserServiceDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/output/RefreshTokenServiceDto$RefreshTokenServiceDtoBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/dto/output/RefreshTokenServiceDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/exceptions/DuplicateUserException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/exceptions/UnusableSessionException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/implementation/FlowerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/implementation/SessionServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/service/implementation/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/ObjectMapperConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/Token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/TokenManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/TokenWorker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/dto/VerifyTokenResultDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/exception/JwtCreationException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/exception/JwtMalformedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/exception/JwtNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/exception/TokenTypeNotSupportedException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/properties/TokenProperties.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/token/JwtAccessToken$JwtAccessTokenBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/token/JwtAccessToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/token/JwtRefreshToken$JwtRefreshTokenBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/token/JwtRefreshToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/tokenManager/TokenManagerImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/tokenWorkers/JwtAccessTokenWorker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/tokenWorkers/JwtRefreshTokenWorker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/flowerplatform/util/tokenManager/implementations/utils/TokenUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application-localtest.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/flowerplatform/security/authentication/handlers/OnSuccessAuthenticationHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
