@@ -18,7 +18,7 @@ phases:
       - touch jasyptKey.txt
       - touch dbEndpoint.txt
       - echo -n $JASYPT_KEY > jasyptKey.txt
-      - echo -n "jdbc:mysql://$(aws cloudformation describe-stacks --stack-name test-env-final --query "Stacks[0].Outputs[?OutputKey=='RdsDbEndpoint'].OutputValue" --output text):3306/flower_platform" > dbEndpoint.txt
+      - echo -n "jdbc:mysql://$(aws cloudformation describe-stacks --stack-name test-env --query "Stacks[0].Outputs[?OutputKey=='RdsDbEndpoint'].OutputValue" --output text):3306/flower_platform" > dbEndpoint.txt
 artifacts:
   files:
     - build/libs/flower-platform.jar
